@@ -1,6 +1,8 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function AgreeAndContinue() {
+  const history = useHistory();
   return (
     <>
       {/* submit Form */}
@@ -17,6 +19,16 @@ function AgreeAndContinue() {
         className="agree-btn"
         value="Agree and continue"
         name="submit-btn"
+        onClick={() => {
+          console.log(history);
+          if (history.location.pathname === "/become_host") {
+           return history.push("/collect_data");
+          } else {
+          //  return history.push("/");
+          //send data to api as  a reguler user 
+          return window.location.reload(false);
+          }
+        }}
       />
       <span>
         Airbnb will send you members-only deals, inspiration, marketing emails,

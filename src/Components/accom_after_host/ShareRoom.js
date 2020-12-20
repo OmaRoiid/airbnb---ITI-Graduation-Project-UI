@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -70,7 +71,9 @@ function ShareRoom() {
         </div>
       </RadioGroup>
       <div className="text-center">
-        <button className="btn btn-primary btn-lg ">Next</button>
+        <Link to="/host_form" >
+         <p className="btn btn-primary btn-lg ">Next</p>
+        </Link>
       </div>
     </section>
   );

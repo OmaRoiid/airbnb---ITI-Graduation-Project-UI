@@ -8,6 +8,7 @@ import Host from "../HostMainComponents/Host";
 import Host_help from "../host_help/Host_help";
 import Safty from "../HostMainComponents/Safty";
 import "./host.css";
+import { withRouter } from "react-router-dom";
 
 function HostPage() {
   const [navbar, setNavbar] = useState(false);

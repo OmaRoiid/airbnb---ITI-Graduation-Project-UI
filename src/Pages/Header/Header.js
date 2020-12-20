@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./Header.css";
-import HeaderCenter from "./Header-center/HeaderCenter";
-import HeaderRight from "./Header-right/HeaderRight";
-import DatePicker from "./Header-center/DatePicker";
+import "../../Pages/Header/Header.css";
+import HeaderCenter from "../../Pages/Header/Header-center/HeaderCenter";
+import HeaderRight from "../../Pages/Header/Header-right/HeaderRight";
+import DatePicker from "../../Pages/Header/Header-center/DatePicker";
 
 const Header = () => {
   const [showSearch, setShowSearch] = useState(false);

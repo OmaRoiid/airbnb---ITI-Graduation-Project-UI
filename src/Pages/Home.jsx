@@ -21,7 +21,7 @@ const Home = () => {
 			<Experiences />
 			<Gift />
 			<JionUs />
-			 <Footer />
+			<Footer />
 		</Fragment>
 	);
 };

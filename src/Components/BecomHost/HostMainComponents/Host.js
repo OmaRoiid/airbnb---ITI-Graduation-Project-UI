@@ -1,13 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import CardOne from "../hostCards/CardOne";
 import CardTwo from "../hostCards/CardTwo";
 import CardTree from "../hostCards/CardTree";
 import CardFour from "../hostCards/CardFour";
 import CardFive from "../hostCards/CardFive";
+import SignUpModel from "../../signup/SignUpModale";
 
-function Host({ navbar }) {
+function Host({ navbar }, props) {
+  //botstrap
+  const [modalShow, setModalShow] = React.useState(false);
   const breakPoints = [
     { width: 767, itemsToShow: 1 },
     { width: 500, itemsToShow: 2 },
@@ -32,17 +35,23 @@ function Host({ navbar }) {
                   navbar ? "host-btn btn-trans fixed-top " : "host-btn "
                 }
               >
-                <Link to="/signup">
-                  <button
-                    className={
-                      navbar
-                        ? "getstarted-btn getstarted-trans "
-                        : "getstarted-btn "
-                    }
-                  >
-                    Get started
-                  </button>
-                </Link>
+                <button
+                  className={
+                    navbar
+                      ? "getstarted-btn getstarted-trans "
+                      : "getstarted-btn "
+                  }
+                  variant="primary"
+                  onClick={() => {
+                    setModalShow(true);
+                  }}
+                >
+                  Get started
+                </button>
+                <SignUpModel
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
               </div>
             </div>
           </div>
